@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-
-public class ChangeSongIcon : MonoBehaviour{
+public class ChangeSongState : MonoBehaviour{
 
     [SerializeField] private Sprite _pauseSong;
     [SerializeField] private Sprite _continueSong;
+    [SerializeField] private Radio _radio;
     private Image _imageToUse;
-
     private void Awake(){
         Init();
     }
@@ -18,9 +17,15 @@ public class ChangeSongIcon : MonoBehaviour{
         _imageToUse.sprite = _continueSong;
     }
 
-    public void ChangeImage(){
-        if(_imageToUse.sprite == _pauseSong) _imageToUse.sprite = _continueSong;
-        else _imageToUse.sprite = _pauseSong;
+    public void ChangeState(){
+        if(_imageToUse.sprite == _continueSong){
+            _imageToUse.sprite = _pauseSong;
+            _radio.PlaySong();
+        }
+        else{
+            _imageToUse.sprite = _continueSong;
+            _radio.PauseSong();
+        }
     }
 
 }
