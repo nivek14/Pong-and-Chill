@@ -5,12 +5,13 @@ using UnityEngine;
 public class Radio : MonoBehaviour{
 
     [SerializeField] private List<AudioClip> songs = new List<AudioClip>();
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     private int randomIndex;
 
     void Awake(){
         audioSource = GetComponent<AudioSource>();
         ChooseSong();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     private void Start() {
@@ -27,13 +28,5 @@ public class Radio : MonoBehaviour{
         ChooseSong();
         audioSource.Play();
     }
-
-    public void PauseSong(){
-        audioSource.Pause();
-    }
-
-    public void PlaySong(){
-        audioSource.Play();
-    }
-
+    
 }
