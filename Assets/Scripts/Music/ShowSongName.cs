@@ -18,6 +18,14 @@ public class ShowSongName : MonoBehaviour{
         SongName();
     }
 
+    private void Update() {
+        UpdateSongName();
+    }
+
+    private void UpdateSongName(){
+        if(_songName.text != _radio.audioSource.clip.name) SongName();
+    }
+
     private void SongName(){
         _songName.text = _radio.audioSource.clip.name;
     }

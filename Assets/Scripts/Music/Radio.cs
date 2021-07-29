@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Radio : MonoBehaviour{
-
+    
+    private static Radio _radioInstance;
     [SerializeField] private List<AudioClip> songs = new List<AudioClip>();
     public AudioSource audioSource;
     private int randomIndex;
@@ -12,6 +13,10 @@ public class Radio : MonoBehaviour{
         audioSource = GetComponent<AudioSource>();
         ChooseSong();
         DontDestroyOnLoad(this.gameObject);
+        if(_radioInstance == null) {
+            _radioInstance = this;
+        } 
+        else Destroy(this.gameObject);
     }
 
     private void Start() {
