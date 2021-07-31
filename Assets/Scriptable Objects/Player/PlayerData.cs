@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PlayerData : ScriptableObject{
 
-    public string playerName = "Dude";
+    public string playerName;
+    public Color playerColor;
 
 }
