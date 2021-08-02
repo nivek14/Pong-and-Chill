@@ -7,5 +7,6 @@ public class PlayerData : ScriptableObject{
 
     public string playerName;
     public Color playerColor;
+    public int playerScore = 0;
 
 }

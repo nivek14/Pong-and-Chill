@@ -1178,6 +1178,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c38983dc8f4ec244b800ec348079394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerScore: {fileID: 1630298054}
+  _playerData: {fileID: 11400000, guid: 9e068809c8f9fff4fa34a31c3a7f8569, type: 2}
+  _speed: 250
+  score: 0
 --- !u!61 &1672300274
 BoxCollider2D:
   m_ObjectHideFlags: 0
