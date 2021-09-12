@@ -261,6 +261,7 @@ GameObject:
   - component: {fileID: 24961722}
   - component: {fileID: 24961725}
   - component: {fileID: 24961724}
+  - component: {fileID: 24961726}
   m_Layer: 5
   m_Name: Ball
   m_TagString: Untagged
@@ -334,7 +335,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 24961720}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c0214306c5665b34bac7a8a4a7e9b463, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -372,6 +373,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &24961726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24961720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9940c4a90569ac34e8d3ee9cfc2cbbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRandX: {x: 4, y: 5}
+  speedRandY: {x: 4, y: 5}
 --- !u!1 &100708574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1449,7 @@ GameObject:
   - component: {fileID: 1672300274}
   m_Layer: 5
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
