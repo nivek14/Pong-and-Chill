@@ -285,7 +285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.857, y: 4.642}
+  m_AnchoredPosition: {x: 2, y: 5}
   m_SizeDelta: {x: 55, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &24961722
@@ -335,11 +335,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 24961720}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c0214306c5665b34bac7a8a4a7e9b463, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.000011444092, y: 0.0056447983}
+  m_Offset: {x: 0.000005722046, y: 0.01372242}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -350,7 +350,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 54.81579, y: 54.771225}
+  m_Size: {x: 54.72569, y: 54.753067}
   m_EdgeRadius: 0
 --- !u!50 &24961725
 Rigidbody2D:
@@ -385,8 +385,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9940c4a90569ac34e8d3ee9cfc2cbbb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRandX: {x: 4, y: 5}
-  speedRandY: {x: 4, y: 5}
+  forceX: 0
+  forceY: 200
+  audios: []
+  randomFactore: 0.5
 --- !u!1 &100708574
 GameObject:
   m_ObjectHideFlags: 0

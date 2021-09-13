@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour{
 
     private void Movement(){
         if(!canMove) return;
-        transform.Translate(speed);
+        if(Input.GetKeyDown(KeyCode.T)) transform.Translate(speed);
     }
 
     private void OnCollisionEnter2D(Collision2D other){
@@ -47,8 +47,4 @@ public class Ball : MonoBehaviour{
         speed = startSpeed;
     }
 
-    public void CanMove(bool state){
-        canMove = state;
-    }
-    
 }
