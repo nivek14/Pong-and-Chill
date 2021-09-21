@@ -7,7 +7,7 @@ using UnityEngine;
 public class Player : MonoBehaviour{
 
     [SerializeField] private TextMeshProUGUI _playerScore;
-    [SerializeField] private PlayerData _playerData;
+    [SerializeField] public PlayerData _playerData;
     [SerializeField] private float _speed;
     private Rigidbody2D _rb;
     private Image _playerImg;
