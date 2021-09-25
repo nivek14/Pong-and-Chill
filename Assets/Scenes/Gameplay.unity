@@ -262,6 +262,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _IAscoreText: {fileID: 100708576}
+  ball: {fileID: 848788445}
+  followSpeed: 200
   _IAscore: 0
 --- !u!224 &24961721 stripped
 RectTransform:
@@ -984,6 +986,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &848788445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4246358599710986118, guid: 301bfd4755b684642a998f10d278fea5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4246358599729556792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9940c4a90569ac34e8d3ee9cfc2cbbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

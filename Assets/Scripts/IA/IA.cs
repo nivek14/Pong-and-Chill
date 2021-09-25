@@ -6,6 +6,8 @@ using UnityEngine;
 public class IA : MonoBehaviour{
 
     [SerializeField] private TextMeshProUGUI _IAscoreText;
+    [SerializeField] private Ball ball;
+    [SerializeField] private float followSpeed;
     public int _IAscore;
 
     void Awake(){
@@ -14,6 +16,7 @@ public class IA : MonoBehaviour{
 
     void Update(){
         ShowIAscore();
+        IAMovement();
     }
 
     private void Init(){
@@ -22,6 +25,11 @@ public class IA : MonoBehaviour{
 
     private void ShowIAscore(){
         _IAscoreText.text = _IAscore.ToString();
+    }
+
+    private void IAMovement(){
+        Vector3 followXonly = new Vector3(ball.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, followXonly, followSpeed * Time.deltaTime);
     }
 
 }

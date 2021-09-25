@@ -10,7 +10,6 @@ public class Score : MonoBehaviour{
     private Ball ball;
     private FinishGame endGame;
 
-    
     private void Awake(){
         player = FindObjectOfType<Player>();
         opponent = FindObjectOfType<IA>();
