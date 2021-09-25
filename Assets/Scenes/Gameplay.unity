@@ -498,7 +498,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 996736453}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1163,6 +1163,7 @@ RectTransform:
   - {fileID: 1122832}
   - {fileID: 100708575}
   - {fileID: 357933579}
+  - {fileID: 24961721}
   - {fileID: 1961351086}
   - {fileID: 157405772}
   m_Father: {fileID: 0}
@@ -1257,6 +1258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1431208581}
+  - component: {fileID: 1431208582}
   m_Layer: 0
   m_Name: Game manager
   m_TagString: Untagged
@@ -1278,6 +1280,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1431208582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431208580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368d1c5cd0746c44c9dd6271d21689f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1610768602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,9 +1667,8 @@ RectTransform:
   - {fileID: 2074305679}
   - {fileID: 736743822}
   - {fileID: 1766353606}
-  - {fileID: 24961721}
   m_Father: {fileID: 996736453}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1838,7 +1851,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1961351086}
+    m_TransformParent: {fileID: 996736453}
     m_Modifications:
     - target: {fileID: 4246358599710986112, guid: 301bfd4755b684642a998f10d278fea5,
         type: 3}
@@ -1858,7 +1871,7 @@ PrefabInstance:
     - target: {fileID: 4246358599710986113, guid: 301bfd4755b684642a998f10d278fea5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4246358599710986113, guid: 301bfd4755b684642a998f10d278fea5,
         type: 3}
