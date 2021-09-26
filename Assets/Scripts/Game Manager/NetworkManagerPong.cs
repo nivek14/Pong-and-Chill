@@ -10,26 +10,18 @@ namespace Mirror.Examples.Pong
     {
         public Transform topRacketSpawn;
         public Transform bottomRacketSpawn;
-        public Transform topRacketScoreSpawn;
-        public Transform bottomRacketScoreSpawn;
         GameObject ball;
 
         public override void OnServerAddPlayer(NetworkConnection conn)
         {
             // add player at correct spawn position
             Transform start = numPlayers == 0 ? topRacketSpawn : bottomRacketSpawn;
-            Transform start2 = numPlayers == 0 ? topRacketScoreSpawn : bottomRacketScoreSpawn;
             GameObject player = Instantiate(playerPrefab, start.position, start.rotation);
             player.transform.localScale = new Vector3(1,1,1);
             NetworkServer.AddPlayerForConnection(conn, player);
 
-            /*if(numPlayers == 1){
-                GameObject score = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Player Score Multi"), topRacketScoreSpawn);
-                NetworkServer.Spawn(score);
-            }*/
-
             // spawn ball if two players
-            if (numPlayers == 1)
+            if (numPlayers == 2)
             {
                 ball = Instantiate(spawnPrefabs.Find(prefab => prefab.name == "Ball Multi"));
                 NetworkServer.Spawn(ball);

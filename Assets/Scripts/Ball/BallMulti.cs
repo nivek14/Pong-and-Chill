@@ -27,7 +27,7 @@ public class BallMulti : MonoBehaviour{
     }
 
     private void OnCollisionEnter2D(Collision2D other){
-        if(other.transform.tag == "Player") speed.y *= -1;
+        if(other.transform.tag == "Player" || other.transform.tag == "ScoreLess" || other.transform.tag == "ScorePlus") speed.y *= -1;
         else speed.x *= -1; 
     }
 
