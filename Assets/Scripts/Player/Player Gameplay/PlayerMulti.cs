@@ -5,11 +5,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
 
-public class Player : MonoBehaviour{
+public class PlayerMulti : MonoBehaviour{
 
     [SerializeField] private TextMeshProUGUI _playerScore;
     [SerializeField] public PlayerData _playerData;
     [SerializeField] private float _speed;
+    private Canvas canvas;
     private Rigidbody2D _rb;
     private Image _playerImg;
     private float _Xpos; 
@@ -28,6 +29,8 @@ public class Player : MonoBehaviour{
         _playerImg = GetComponent<Image>();
         _playerImg.color = _playerData.playerColor;
         _playerData.playerScore = 0;
+        canvas = FindObjectOfType<Canvas>();
+        gameObject.transform.SetParent(canvas.transform);
     }
 
     private void PlayerMovement(){
@@ -36,7 +39,7 @@ public class Player : MonoBehaviour{
     }
 
     private void ShowPlayerScore(){
-        _playerScore.text = _playerData.playerScore.ToString();
+        //_playerScore.text = _playerData.playerScore.ToString();
     }
 
 }
