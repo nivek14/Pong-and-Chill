@@ -158,6 +158,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreToFinishedMax: 3
   scoreToFinishedMinimum: -3
+  scoreClip: {fileID: 8300000, guid: 52986a6ee1dc3b5458ccaf4c080c9ace, type: 3}
+  scoreEffect: {fileID: 3302442364004722511, guid: 10434d6bf3af98b46a88ab696f543ee3,
+    type: 3}
+  generalScore: 0
 --- !u!114 &1302441197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,3 +175,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0.7, y: -0.7, z: 0}
+  pongClip: {fileID: 8300000, guid: 85385d22fdb44a84893e1026b96b199c, type: 3}
